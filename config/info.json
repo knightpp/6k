@@ -54,7 +54,7 @@
     },
 
     "matrix_pins": {
-      "direct": [["GP1", "GP2", "GP3", "GP4", "GP5", "GP6"]]
+      "direct": [["GP28", "GP26", "GP16", "GP0", "GP9", "GP15"]]
     },
 
     "dynamic_keymap": {
