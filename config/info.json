@@ -1,0 +1,44 @@
+{
+    "keyboard_name": "6k",
+    "manufacturer": "knightpp",
+    "url": "",
+    "maintainer": "knightpp",
+
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+
+    "usb": {
+      "vid": "0xFEED",
+      "pid": "0x0037",
+      "device_version": "0.0.1"
+    },
+
+    "bootmagic": {
+      "matrix": [0, 0]
+    },
+    "features": {
+      "bootmagic": true
+    },
+
+    "matrix_pins": {
+      "direct": [["GP1", "GP2", "GP3", "GP4", "GP5", "GP6"]]
+    },
+
+    "dynamic_keymap": {
+      "layer_count": 10
+    },
+
+    "layouts": {
+      "LAYOUT": {
+        "layout": [
+          {"label": "k00", "matrix": [0, 0], "x": 0, "y": 0},
+          {"label": "k01", "matrix": [0, 1], "x": 1, "y": 0},
+          {"label": "k02", "matrix": [0, 2], "x": 2, "y": 0},
+
+          {"label": "k10", "matrix": [0, 3], "x": 0, "y": 1},
+          {"label": "k11", "matrix": [0, 4], "x": 1, "y": 1},
+          {"label": "k12", "matrix": [0, 5], "x": 2, "y": 1}
+        ]
+      }
+    }
+  }
