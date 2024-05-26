@@ -14,10 +14,43 @@
     },
 
     "bootmagic": {
+      "enabled": true,
       "matrix": [0, 0]
     },
     "features": {
-      "bootmagic": true
+      "bootmagic": true,
+      "extrakey": true,
+      "console": true,
+      "command": true,
+      "rgblight": true
+    },
+    "mouse_key": {
+      "enabled": true
+    },
+
+    "ws2812":{
+      "driver": "vendor",
+      "pin": "GP23"
+    },
+    "rgblight": {
+      "led_count": 1,
+      "animations": {
+        "breathing": true,
+        "rainbow_mood": true,
+        "rainbow_swirl": true,
+        "snake": true,
+        "knight": true,
+        "christmas": true,
+        "static_gradient": true,
+        "rgb_test": true,
+        "alternating": true,
+        "twinkle": true
+      },
+      "default": {
+        "animation": "rainbow_mood",
+        "on": false
+      },
+      "sleep": true
     },
 
     "matrix_pins": {
