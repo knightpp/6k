@@ -8,7 +8,7 @@
     "bootloader": "rp2040",
 
     "usb": {
-      "vid": "0xFEED",
+      "vid": "0x646B",
       "pid": "0x0037",
       "device_version": "0.0.1"
     },
@@ -20,8 +20,6 @@
     "features": {
       "bootmagic": true,
       "extrakey": true,
-      "console": true,
-      "command": true,
       "rgblight": true
     },
     "mouse_key": {
