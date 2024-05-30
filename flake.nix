@@ -21,23 +21,21 @@
         f {
           pkgs = import nixpkgs {inherit system;};
         });
+
+    shell = pkgs:
+      pkgs.mkShell {
+        name = "6k env";
+        nativeBuildInputs = builtins.attrValues {
+          inherit (pkgs) qmk;
+        };
+      };
   in {
     packages = forAllSystems ({pkgs}: {
-      default = pkgs.qmk;
+      default = shell pkgs;
     });
 
     devShells = forAllSystems ({pkgs}: {
-      default = pkgs.mkShell {
-        name = "6k env";
-        nativeBuildInputs = builtins.attrValues {
-          inherit (pkgs) qmk hello;
-        };
-
-        shellHook = ''
-          echo "test shell!"
-        '';
-        TEST_VAR = "applied";
-      };
+      default = shell pkgs;
     });
 
     formatter = forAllSystems ({pkgs, ...}: pkgs.alejandra);
